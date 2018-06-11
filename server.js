@@ -55,7 +55,12 @@ if (['', 'null', 'table'].includes(METHOD.toLowerCase())) {
 
 const server = http.createServer(function(req, res) {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('success');
+  res.end(
+    'antproxy'
+    +`\r\n  address: ${LOCAL_ADDRESS}`
+    +`\r\n  port: ${PORT}`
+    +`\r\n  timeout: ${timeout}`
+  );
 });
 
 const wss = new WebSocketServer({ server });
