@@ -37,6 +37,9 @@ if (process.env.KEY) {
 if (process.env.METHOD) {
   config['method'] = process.env.METHOD;
 }
+if (process.env.TIMEOUT){
+  config['timeout'] = process.env.TIMEOUT;
+}
 
 for (let k in configFromArgs) {
   const v = configFromArgs[k];

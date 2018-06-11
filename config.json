@@ -1,9 +1,9 @@
 {
-  "server": "0.0.0.0",
+  "server": "127.0.0.1",
   "local_address": "0.0.0.0",
   "scheme": "ws",
   "local_port": 1080,
-  "remote_port": 53175,
+  "remote_port": 8080,
   "password": "`try*(^^$some^$%^complex>:<>?~password/",
   "timeout": 2000,
   "method": "rc4-md5"
