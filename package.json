@@ -9,5 +9,17 @@
   },
   "scripts": {
     "start": "node server.js -b 0.0.0.0"
-  }
+  },
+  "description": "shadowsocks-heroku\r ==================",
+  "main": "encrypt.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antecer/shadowsocks-heroku.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Antecer/shadowsocks-heroku/issues"
+  },
+  "homepage": "https://github.com/Antecer/shadowsocks-heroku#readme"
 }
