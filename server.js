@@ -31,9 +31,6 @@ const config = JSON.parse(configContent);
 if (process.env.PORT) {
   config['remote_port'] = +process.env.PORT;
 }
-if (process.env.PORT2) {
-  config['remote_port2'] = +process.env.PORT2;
-}
 if (process.env.KEY) {
   config['password'] = process.env.KEY;
 }
@@ -52,7 +49,6 @@ for (let k in configFromArgs) {
 const timeout = Math.floor(config.timeout * 1000);
 const LOCAL_ADDRESS = config.local_address;
 const PORT = config.remote_port;
-const PORT2 = config.remote_port2;
 const KEY = config.password;
 let METHOD = config.method;
 
@@ -189,18 +185,10 @@ wss.on('connection', function(ws) {
   });
 });
 
-try {
-  server.listen(PORT, LOCAL_ADDRESS, function() {
-    const address = server.address();
-    console.log('server listening at', address);
-  });
-} catch (e) {
-  console.error(e.message);
-  server.listen(PORT2, LOCAL_ADDRESS, function() {
-    const address = server.address();
-    console.log('server listening at', address);
-  });
-}
+server.listen(PORT, LOCAL_ADDRESS, function() {
+  const address = server.address();
+  console.log('server listening at', address);
+});
 
 server.on('error', function(e) {
   if (e.code === 'EADDRINUSE') {
