@@ -27,7 +27,7 @@ const options = {
     'scheme'
   ],
   default: {
-    config_file: path.resolve(__dirname, 'config.json')
+    config_file: path.resolve(__dirname, 'configlocal.json')
   }
 };
 
